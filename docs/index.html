@@ -1,50 +1,109 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Portfolio GithubPages Demo</title>
+    <title>Snake Game Präsentation</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Willkommen zu meiner Präsentation!</h1>
-				</section>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <!-- Titel der Präsentation -->
+        <section>
+            <h1>Willkommen zu meiner Präsentation!</h1>
+            <p><strong>Projekt:</strong> Snake Game in JavaFX</p>
+        </section>
 
-				<section>
+        <!-- Einleitung -->
+        <section>
+            <h2>Was ist Snake?</h2>
+            <p>Snake ist ein klassisches Arcade-Spiel, bei dem der Spieler eine Schlange steuert, die Nahrung isst und
+                dabei länger wird.</p>
+            <img src="media/theme.png" alt="Snake Illustration">
+        </section>
 
-					<p>Hier werde ich Ihnen Snake vorstellen!</p>
-					<img src="media/img.png">
-					<p>Snake haben wir in Java programmiert</p>
+        <!-- Technologien -->
+        <section>
+            <h2>Technologie-Stack</h2>
+            <ul>
+                <li><strong>Programmiersprache:</strong> Java</li>
+                <li><strong>Framework:</strong> JavaFX</li>
+                <li><strong>IDE:</strong> IntelliJ IDEA</li>
+                <li><strong>Build-Tool:</strong> Maven</li>
+            </ul>
+        </section>
 
+        <!-- Features -->
+        <section>
+            <h2>Features des Spiels</h2>
+            <ul>
+                <li>Bewegliche Schlange mit wachsendem Körper</li>
+                <li>Punkte sammeln durch das Essen von Nahrung</li>
+                <li>Game Over bei Kollision mit der Wand oder eigenem Körper</li>
+                <li>Anpassbares Spielfeld</li>
+            </ul>
+            <img src="media/gamescreen.png" alt="Gameplay Screenshot">
+        </section>
 
-				</section>
-			</div>
-		</div>
+        <!-- Code und Architektur -->
+        <section>
+            <h2>Architektur und Code</h2>
+            <p>Das Snake-Spiel besteht aus den folgenden Modulen:</p>
+            <ul>
+                <li><strong>GameController:</strong> Steuert die Logik des Spiels</li>
+                <li><strong>Snake:</strong> Modelliert die Schlange und ihre Bewegung</li>
+                <li><strong>Food:</strong> Generiert Nahrung an zufälligen Positionen</li>
+                <li><strong>GameBoard:</strong> Rendered das Spielfeld</li>
+            </ul>
+            <pre><code class="java">// Beispiel für den Snake-Klassenaufbau
+public class Snake {
+    private List<Point> body;
+    private Direction direction;
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    public void move() {
+        // Logik für die Bewegung der Schlange
+    }
+}
+			</code></pre>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <!-- Demo -->
+        <section>
+            <h2>Live-Demo</h2>
+            <p>Hier zeigen wir eine Demo des Spiels:</p>
+            <video src="media/snake_demo.mp4" controls></video>
+        </section>
+
+        <!-- Fazit -->
+        <section>
+            <h2>Lessons Learned</h2>
+            <ul>
+                <li>Erstellung einer flexiblen Spielarchitektur</li>
+                <li>Fehlerhandling und Debugging in JavaFX</li>
+                <li>Integration von grafischen Elementen</li>
+            </ul>
+            <p>Danke fürs Zuschauen!</p>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    Reveal.initialize({
+        hash: true,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
 </html>
